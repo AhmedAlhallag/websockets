@@ -4,7 +4,7 @@ require_once('vendor/autoload.php');
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
-class Socket implements MessageComponentInterface {
+class Chat implements MessageComponentInterface {
 
     public function __construct()
     {
@@ -27,7 +27,8 @@ class Socket implements MessageComponentInterface {
                 continue;
             }
 
-            $client->send( "Client $from->resourceId said $msg" );
+            // $client->send( "Client $from->resourceId said $msg" );
+            $client->send( $msg );
         }
     }
 

@@ -18,9 +18,12 @@
             //     socket.send( message.value );
             // }
 
-            socket.onmessage = function(e) {
-                alert( e.data );
-            }
+                  socket.onmessage = function(e) {
+                if (e.data == "start"){
+                    alert("Exam has started.");
+                } else if (e.data == 'end'){
+                    alert('Exam has ended');
+                }
         </script>
     </body>
 </html>
